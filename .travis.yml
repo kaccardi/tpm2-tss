@@ -56,11 +56,14 @@ install:
   - tar xJf autoconf-archive-2017.09.28.tar.xz
   - cp autoconf-archive-2017.09.28/m4/ax_code_coverage.m4 m4/
   - pip install --user cpp-coveralls
+  - go get -u github.com/client9/misspell/cmd/misspell
 
 before_script:
   - ./bootstrap
 
 script:
+  - find . -type f -name '*.md' | xargs -I % bash -c "misspell -error %"
+  - find . -type f -name '*.h' -o -type f -name '*.c' | xargs -I % bash -c "misspell -source=go -error %"
   - mkdir ./build
   - pushd ./build
   - |
