@@ -62,8 +62,8 @@ before_script:
   - ./bootstrap
 
 script:
-  - find . -type f -name '*.md' | xargs -I % bash -c "misspell -error %"
-  - find . -type f -name '*.h' -o -type f -name '*.c' | xargs -I % bash -c "misspell -source=go -error %"
+  - find ./tpm2-tss -type f -name '*.md' | xargs -I % bash -c "misspell -error %"
+  - find ./tpm2-tss -type f -name '*.h' -o -type f -name '*.c' | xargs -I % bash -c "misspell -source=go -error %"
   - mkdir ./build
   - pushd ./build
   - |
