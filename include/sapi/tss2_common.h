@@ -108,7 +108,7 @@ typedef struct {
 // produce the error codes for each layer.
 //
 #define TSS2_BASE_RC_GENERAL_FAILURE        1 /* Catch all for all errors
-                                                 not otherwise specifed */
+                                                 not otherwise specified */
 #define TSS2_BASE_RC_NOT_IMPLEMENTED        2 /* If called functionality isn't implemented */
 #define TSS2_BASE_RC_BAD_CONTEXT            3 /* A context structure is bad */
 #define TSS2_BASE_RC_ABI_MISMATCH           4 /* Passed in ABI version doesn't match
@@ -125,7 +125,7 @@ typedef struct {
 #define TSS2_BASE_RC_NOT_PERMITTED         12 /* Operation not permitted. */
 #define TSS2_BASE_RC_INVALID_SESSIONS      13 /* Session structures were sent, but */
                                               /* command doesn't use them or doesn't use
-                                                 the specifed number of them */
+                                                 the specified number of them */
 #define TSS2_BASE_RC_NO_DECRYPT_PARAM      14 /* If function called that uses decrypt
                                                  parameter, but command doesn't support
                                                  crypt parameter. */

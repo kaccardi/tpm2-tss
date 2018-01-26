@@ -217,7 +217,7 @@ that hadn't been received. Caused seg faults under Linux.
 - Fixed timeout for async Startup test.
 - Fixed SocketReceiveTpmResponse for blocking case.
 - Fixed bug in ExecuteFinish: BAD_SEQUENCE error generated early in function
-was getting overwritten by INSUFFICENT_RESPONSE error.
+was getting overwritten by INSUFFICIENT_RESPONSE error.
 - Fixed bug in ExecuteFinish: it was always setting timeout to 0 instead of
 TSS2_TCTI_TIMEOUT_BLOCK.
 - Fixed bug in resource manager: error level for non-TPM errors was getting

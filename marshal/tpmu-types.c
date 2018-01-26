@@ -369,7 +369,7 @@ TSS2_RC Tss2_MU_##type##_Marshal(type const *src, uint32_t selector, uint8_t buf
  * operator, member, function> we remove the operator element and have
  * a 3-tuple of <selector, member, function>. The operator element isn't
  * needed because the first parameter to the function element is always a
- * referenece (never a value).
+ * reference (never a value).
  */
 #define TPMU_UNMARSHAL(type, sel, m, fn, sel2, m2, fn2, sel3, m3, fn3, \
                        sel4, m4, fn4, sel5, m5, fn5, sel6, m6, fn6, sel7, m7, fn7, \

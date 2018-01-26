@@ -105,7 +105,7 @@ tcti_context_intel_cast (TSS2_TCTI_CONTEXT *ctx)
     return (TSS2_TCTI_CONTEXT_INTEL*)ctx;
 }
 /*
- * This funciton performs common checks on the context structure. It should
+ * This function performs common checks on the context structure. It should
  * be used by all externally facing TCTI functions before the context is used
  * as any of the private types.
  */
