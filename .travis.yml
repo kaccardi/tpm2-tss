@@ -62,6 +62,8 @@ before_script:
   - ./bootstrap
 
 script:
+  - find . -type d -name "cmocka*" -prune -o -type d -name "ibmtpm" -prune -o -type f -name '*.md' | xargs -I % bash -c "misspell -error %"
+  - find . -type d -name "cmocka*" -prune -o -type d -name "ibmtpm" -prune -o -type f -name '*.h' -o -type f -name '*.c' | xargs -I % bash -c "misspell -source=go -error %"
   - mkdir ./build
   - pushd ./build
   - |
@@ -83,8 +85,6 @@ script:
         cat ${LOG}
     done
   - cat test/tpmclient/tpmclient.log
-  - find ./tpm2-tss -type f -name '*.md' | xargs -I % bash -c "misspell -error %"
-  - find ./tpm2-tss -type f -name '*.h' -o -type f -name '*.c' | xargs -I % bash -c "misspell -source=go -error %"
   - popd
   - |
     if [ "$CC" == "gcc" -a -n "$COVERALLS_REPO_TOKEN" ]; then
